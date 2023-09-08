@@ -56,7 +56,9 @@ namespace Database_Final_Project
                             }
                             else
                             {
-                                MessageBox.Show("Normal User");
+                                UserDashboard ud = new UserDashboard();
+                                ud.Show();
+                                this.Hide();
                             }
                         }
                         else

@@ -1,7 +1,7 @@
 ﻿
 namespace Database_Final_Project
 {
-    partial class ShowMeetingRoom
+    partial class UserDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -29,36 +29,33 @@ namespace Database_Final_Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.gvRoomList = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gvRoomList)).BeginInit();
+            this.btnshowroom = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // gvRoomList
+            // btnshowroom
             // 
-            this.gvRoomList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvRoomList.Location = new System.Drawing.Point(12, 12);
-            this.gvRoomList.Name = "gvRoomList";
-            this.gvRoomList.Size = new System.Drawing.Size(763, 339);
-            this.gvRoomList.TabIndex = 0;
-            this.gvRoomList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvRoomList_CellClick);
-            this.gvRoomList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvRoomList_CellContentClick);
+            this.btnshowroom.Location = new System.Drawing.Point(344, 133);
+            this.btnshowroom.Name = "btnshowroom";
+            this.btnshowroom.Size = new System.Drawing.Size(133, 23);
+            this.btnshowroom.TabIndex = 0;
+            this.btnshowroom.Text = "Check Rooms";
+            this.btnshowroom.UseVisualStyleBackColor = true;
+            this.btnshowroom.Click += new System.EventHandler(this.btnshowroom_Click);
             // 
-            // ShowMeetingRoom
+            // UserDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gvRoomList);
-            this.Name = "ShowMeetingRoom";
-            this.Text = "ShowMeetingRoom";
-            this.Load += new System.EventHandler(this.ShowMeetingRoom_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gvRoomList)).EndInit();
+            this.Controls.Add(this.btnshowroom);
+            this.Name = "UserDashboard";
+            this.Text = "UserDashboard";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gvRoomList;
+        private System.Windows.Forms.Button btnshowroom;
     }
 }

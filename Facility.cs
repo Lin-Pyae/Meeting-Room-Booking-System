@@ -9,36 +9,63 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Configuration;
+using System.Data.OleDb;
+using System.Configuration;
 
 namespace Database_Final_Project
 {
-    public partial class ShowMeetingRoom : Form
+    public partial class Facility : Form
     {
-        public ShowMeetingRoom()
+        public Facility()
         {
             InitializeComponent();
         }
 
-        private void ShowMeetingRoom_Load(object sender, EventArgs e)
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            string facility = txtFacility.Text;
+            using (OleDbConnection con = new OleDbConnection(ConfigurationManager.ConnectionStrings["Connection"].ToString()))
+            {
+                con.Open();
+                using (OleDbCommand cmd = new OleDbCommand("INSERT INTO facilities (facility_name) VALUES (?)", con))
+                {
+                    cmd.Parameters.AddWithValue("facility_name", facility);
+   
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("New Facility Added");
+                        Facility_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to add a new facility.");
+                    }
+                }
+            }
+        }
+
+        private void Facility_Load(object sender, EventArgs e)
         {
             OleDbConnection con = new OleDbConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["Connection"].ToString();
             con.Open();
             OleDbCommand cmd = new OleDbCommand();
-            cmd.CommandText = "Select * from [meeting_rooms]";
+            cmd.CommandText = "Select * from [facilities]";
             cmd.Connection = con;
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
-            gvRoomList.DataSource = ds.Tables[0];
-            gvRoomList.CellClick += new DataGridViewCellEventHandler(this.gvRoomList_CellClick);
+            dgvFacility.DataSource = ds.Tables[0];
+            dgvFacility.CellClick += new DataGridViewCellEventHandler(this.dgvFacility_CellClick);
         }
 
-        private void gvRoomList_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvFacility_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                DataGridViewRow selectedRow = gvRoomList.Rows[e.RowIndex];
+                DataGridViewRow selectedRow = dgvFacility.Rows[e.RowIndex];
 
                 if (!selectedRow.IsNewRow) // Check if it's not a new row
                 {
@@ -47,10 +74,10 @@ namespace Database_Final_Project
 
                     if (result == DialogResult.Yes)
                     {
-                        int selectedRowID = Convert.ToInt32(selectedRow.Cells["room_id"].Value); // Assuming "ID" is the name of your unique identifier column
+                        int selectedRowID = Convert.ToInt32(selectedRow.Cells["facility_id"].Value); // Assuming "ID" is the name of your unique identifier column
 
                         // Delete the row from the DataGridView
-                        gvRoomList.Rows.Remove(selectedRow);
+                        dgvFacility.Rows.Remove(selectedRow);
 
                         // Update your database: Delete the corresponding row
                         DeleteRowFromDatabase(selectedRowID);
@@ -69,7 +96,7 @@ namespace Database_Final_Project
 
                     using (OleDbCommand cmd = new OleDbCommand())
                     {
-                        cmd.CommandText = "DELETE FROM [meeting_rooms] WHERE room_id = @ID";
+                        cmd.CommandText = "DELETE FROM [facilities] WHERE facility_id = @ID";
                         cmd.Parameters.AddWithValue("@ID", rowID);
                         cmd.Connection = con;
 
@@ -90,11 +117,6 @@ namespace Database_Final_Project
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void gvRoomList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

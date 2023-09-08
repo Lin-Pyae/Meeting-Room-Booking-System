@@ -34,5 +34,11 @@ namespace Database_Final_Project
             BookMeetingRoom br = new BookMeetingRoom();
             br.Show();
         }
+
+        private void btnAddFacility_Click(object sender, EventArgs e)
+        {
+            Facility fa = new Facility();
+            fa.Show();
+        }
     }
 }
