@@ -71,6 +71,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\BookedRoom.cs" />
     <Compile Include="Model\Facility.cs" />
     <Compile Include="Model\Invitee.cs" />
@@ -85,6 +91,12 @@
     <Compile Include="ShowMeetingRoom.Designer.cs">
       <DependentUpon>ShowMeetingRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowRoomNameWithInvitePersonCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRoomNameWithInvitePersonCount.Designer.cs">
+      <DependentUpon>ShowRoomNameWithInvitePersonCount.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddMeetingRoom.resx">
       <DependentUpon>AddMeetingRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +109,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -108,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="ShowMeetingRoom.resx">
       <DependentUpon>ShowMeetingRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRoomNameWithInvitePersonCount.resx">
+      <DependentUpon>ShowRoomNameWithInvitePersonCount.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

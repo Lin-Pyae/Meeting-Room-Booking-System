@@ -64,10 +64,42 @@ namespace Database_Final_Project
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            int user_id = Int32.Parse(txtuser.Text);
-            string room = txtroom.Text;
+            int user_id = Int32.Parse(txtuser.SelectedValue.ToString());
+            int room = Int32.Parse(txtroom.SelectedValue.ToString());
+            string date = txtDate.Value.ToString("MM/dd/yyyy");
+            string startTime = $"{date} {dateTimePicker1.Value.ToString("hh:mm:ss tt")}";
+            string endTime = $"{date} {txtEnd.Value.ToString("hh:mm:ss tt")}";
 
-            
+            using (OleDbConnection con = new OleDbConnection(ConfigurationManager.ConnectionStrings["Connection"].ToString()))
+            {
+                con.Open();
+                using (OleDbCommand cmd = new OleDbCommand("INSERT INTO booked_room (room_id, user_id, [date], start_time, end_time) VALUES (?, ?, ?, ?, ?)", con))
+                {
+                    cmd.Parameters.AddWithValue("room_id", room);
+                    cmd.Parameters.AddWithValue("user_id", user_id);
+                    cmd.Parameters.AddWithValue("date", date);
+                    cmd.Parameters.AddWithValue("start_time", startTime);
+                    cmd.Parameters.AddWithValue("end_time", endTime);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Booking Success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to book a room");
+                    }
+                }
+            }
+
+
+
+        }
+
+        private void txtroom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

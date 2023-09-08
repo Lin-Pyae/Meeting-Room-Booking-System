@@ -49,6 +49,7 @@ namespace Database_Final_Project
             this.txtroom.Name = "txtroom";
             this.txtroom.Size = new System.Drawing.Size(96, 21);
             this.txtroom.TabIndex = 0;
+            this.txtroom.SelectedIndexChanged += new System.EventHandler(this.txtroom_SelectedIndexChanged);
             // 
             // txtuser
             // 
@@ -119,9 +120,9 @@ namespace Database_Final_Project
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(245, 239);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 9;
-            this.label1.Text = "End Time";
+            this.label1.Text = "Start Time";
             // 
             // dateTimePicker1
             // 

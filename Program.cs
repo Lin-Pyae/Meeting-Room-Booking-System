@@ -16,7 +16,8 @@ namespace Database_Final_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
+            Application.Run(new Login());
+            //Application.Run(new Dashboard());
         }
     }
 }

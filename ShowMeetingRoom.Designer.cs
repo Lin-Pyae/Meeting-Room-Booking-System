@@ -40,6 +40,7 @@ namespace Database_Final_Project
             this.gvRoomList.Name = "gvRoomList";
             this.gvRoomList.Size = new System.Drawing.Size(763, 339);
             this.gvRoomList.TabIndex = 0;
+            this.gvRoomList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvRoomList_CellClick);
             // 
             // ShowMeetingRoom
             // 
