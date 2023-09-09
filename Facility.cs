@@ -48,6 +48,8 @@ namespace Database_Final_Project
 
         private void Facility_Load(object sender, EventArgs e)
         {
+            
+            
             OleDbConnection con = new OleDbConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["Connection"].ToString();
             con.Open();

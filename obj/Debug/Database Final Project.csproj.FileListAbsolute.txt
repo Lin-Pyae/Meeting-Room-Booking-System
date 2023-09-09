@@ -17,3 +17,4 @@ C:\Users\User\source\repos\Database Final Project\obj\Debug\Database_Final_Proje
 C:\Users\User\source\repos\Database Final Project\obj\Debug\Database_Final_Project.Facility.resources
 C:\Users\User\source\repos\Database Final Project\obj\Debug\Database_Final_Project.CheckRoomUser.resources
 C:\Users\User\source\repos\Database Final Project\obj\Debug\Database_Final_Project.UserDashboard.resources
+C:\Users\User\source\repos\Database Final Project\obj\Debug\Database_Final_Project.UserRegister.resources
