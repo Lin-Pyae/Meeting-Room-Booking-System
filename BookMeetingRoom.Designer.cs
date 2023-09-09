@@ -58,6 +58,7 @@ namespace Database_Final_Project
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(96, 21);
             this.txtuser.TabIndex = 1;
+            this.txtuser.SelectedIndexChanged += new System.EventHandler(this.txtuser_SelectedIndexChanged);
             // 
             // usertxt
             // 
@@ -104,6 +105,7 @@ namespace Database_Final_Project
             this.txtEnd.ShowUpDown = true;
             this.txtEnd.Size = new System.Drawing.Size(118, 20);
             this.txtEnd.TabIndex = 6;
+            this.txtEnd.ValueChanged += new System.EventHandler(this.txtEnd_ValueChanged);
             this.txtEnd.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtEnd_MouseDown);
             // 
             // endtxt

@@ -101,5 +101,15 @@ namespace Database_Final_Project
         {
 
         }
+
+        private void txtEnd_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtuser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

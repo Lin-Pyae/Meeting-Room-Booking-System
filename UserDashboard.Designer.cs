@@ -30,6 +30,7 @@ namespace Database_Final_Project
         private void InitializeComponent()
         {
             this.btnshowroom = new System.Windows.Forms.Button();
+            this.btnbook = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnshowroom
@@ -42,11 +43,22 @@ namespace Database_Final_Project
             this.btnshowroom.UseVisualStyleBackColor = true;
             this.btnshowroom.Click += new System.EventHandler(this.btnshowroom_Click);
             // 
+            // btnbook
+            // 
+            this.btnbook.Location = new System.Drawing.Point(344, 192);
+            this.btnbook.Name = "btnbook";
+            this.btnbook.Size = new System.Drawing.Size(133, 23);
+            this.btnbook.TabIndex = 1;
+            this.btnbook.Text = "Book Room";
+            this.btnbook.UseVisualStyleBackColor = true;
+            this.btnbook.Click += new System.EventHandler(this.btnbook_Click);
+            // 
             // UserDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnbook);
             this.Controls.Add(this.btnshowroom);
             this.Name = "UserDashboard";
             this.Text = "UserDashboard";
@@ -57,5 +69,6 @@ namespace Database_Final_Project
         #endregion
 
         private System.Windows.Forms.Button btnshowroom;
+        private System.Windows.Forms.Button btnbook;
     }
 }
