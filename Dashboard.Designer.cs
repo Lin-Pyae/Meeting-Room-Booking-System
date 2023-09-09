@@ -29,85 +29,132 @@ namespace Database_Final_Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.topic = new System.Windows.Forms.Label();
-            this.addroombtn = new System.Windows.Forms.Button();
-            this.showroombtn = new System.Windows.Forms.Button();
-            this.bookroombtn = new System.Windows.Forms.Button();
-            this.btnAddFacility = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.meetingRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addMeetingRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addFacilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addBookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // topic
+            // menuStrip1
             // 
-            this.topic.AutoSize = true;
-            this.topic.Location = new System.Drawing.Point(344, 32);
-            this.topic.Name = "topic";
-            this.topic.Size = new System.Drawing.Size(155, 13);
-            this.topic.TabIndex = 0;
-            this.topic.Text = "Meeting Room Booking System";
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.meetingRoomToolStripMenuItem,
+            this.facilityToolStripMenuItem,
+            this.userToolStripMenuItem,
+            this.bookingToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 33);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // addroombtn
+            // meetingRoomToolStripMenuItem
             // 
-            this.addroombtn.Location = new System.Drawing.Point(363, 107);
-            this.addroombtn.Name = "addroombtn";
-            this.addroombtn.Size = new System.Drawing.Size(120, 23);
-            this.addroombtn.TabIndex = 1;
-            this.addroombtn.Text = "Add Meeting Room";
-            this.addroombtn.UseVisualStyleBackColor = true;
-            this.addroombtn.Click += new System.EventHandler(this.addroombtn_Click);
+            this.meetingRoomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addMeetingRoomToolStripMenuItem});
+            this.meetingRoomToolStripMenuItem.Name = "meetingRoomToolStripMenuItem";
+            this.meetingRoomToolStripMenuItem.Size = new System.Drawing.Size(146, 29);
+            this.meetingRoomToolStripMenuItem.Text = "Meeting Room";
             // 
-            // showroombtn
+            // addMeetingRoomToolStripMenuItem
             // 
-            this.showroombtn.Location = new System.Drawing.Point(363, 155);
-            this.showroombtn.Name = "showroombtn";
-            this.showroombtn.Size = new System.Drawing.Size(120, 23);
-            this.showroombtn.TabIndex = 2;
-            this.showroombtn.Text = "Show Meeting Rooms";
-            this.showroombtn.UseVisualStyleBackColor = true;
-            this.showroombtn.Click += new System.EventHandler(this.showroombtn_Click);
+            this.addMeetingRoomToolStripMenuItem.Name = "addMeetingRoomToolStripMenuItem";
+            this.addMeetingRoomToolStripMenuItem.Size = new System.Drawing.Size(271, 34);
+            this.addMeetingRoomToolStripMenuItem.Text = "Add Meeting Room";
+            this.addMeetingRoomToolStripMenuItem.Click += new System.EventHandler(this.addMeetingRoomToolStripMenuItem_Click);
             // 
-            // bookroombtn
+            // facilityToolStripMenuItem
             // 
-            this.bookroombtn.Location = new System.Drawing.Point(383, 247);
-            this.bookroombtn.Name = "bookroombtn";
-            this.bookroombtn.Size = new System.Drawing.Size(75, 23);
-            this.bookroombtn.TabIndex = 3;
-            this.bookroombtn.Text = "Book Room";
-            this.bookroombtn.UseVisualStyleBackColor = true;
-            this.bookroombtn.Click += new System.EventHandler(this.bookroombtn_Click);
+            this.facilityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addFacilityToolStripMenuItem});
+            this.facilityToolStripMenuItem.Name = "facilityToolStripMenuItem";
+            this.facilityToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
+            this.facilityToolStripMenuItem.Text = "Facility";
             // 
-            // btnAddFacility
+            // addFacilityToolStripMenuItem
             // 
-            this.btnAddFacility.Location = new System.Drawing.Point(383, 201);
-            this.btnAddFacility.Name = "btnAddFacility";
-            this.btnAddFacility.Size = new System.Drawing.Size(75, 23);
-            this.btnAddFacility.TabIndex = 4;
-            this.btnAddFacility.Text = "Add Facility";
-            this.btnAddFacility.UseVisualStyleBackColor = true;
-            this.btnAddFacility.Click += new System.EventHandler(this.btnAddFacility_Click);
+            this.addFacilityToolStripMenuItem.Name = "addFacilityToolStripMenuItem";
+            this.addFacilityToolStripMenuItem.Size = new System.Drawing.Size(205, 34);
+            this.addFacilityToolStripMenuItem.Text = "Add Facility";
+            this.addFacilityToolStripMenuItem.Click += new System.EventHandler(this.addFacilityToolStripMenuItem_Click);
+            // 
+            // userToolStripMenuItem
+            // 
+            this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addUserToolStripMenuItem});
+            this.userToolStripMenuItem.Name = "userToolStripMenuItem";
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(63, 29);
+            this.userToolStripMenuItem.Text = "User";
+            // 
+            // addUserToolStripMenuItem
+            // 
+            this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addUserToolStripMenuItem.Text = "Add User";
+            this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
+            // 
+            // bookingToolStripMenuItem
+            // 
+            this.bookingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addBookingToolStripMenuItem,
+            this.checkRoomToolStripMenuItem});
+            this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
+            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(94, 29);
+            this.bookingToolStripMenuItem.Text = "Booking";
+            // 
+            // addBookingToolStripMenuItem
+            // 
+            this.addBookingToolStripMenuItem.Name = "addBookingToolStripMenuItem";
+            this.addBookingToolStripMenuItem.Size = new System.Drawing.Size(219, 34);
+            this.addBookingToolStripMenuItem.Text = "Add Booking";
+            this.addBookingToolStripMenuItem.Click += new System.EventHandler(this.addBookingToolStripMenuItem_Click);
+            // 
+            // checkRoomToolStripMenuItem
+            // 
+            this.checkRoomToolStripMenuItem.Name = "checkRoomToolStripMenuItem";
+            this.checkRoomToolStripMenuItem.Size = new System.Drawing.Size(219, 34);
+            this.checkRoomToolStripMenuItem.Text = "Check Room";
+            this.checkRoomToolStripMenuItem.Click += new System.EventHandler(this.checkRoomToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAddFacility);
-            this.Controls.Add(this.bookroombtn);
-            this.Controls.Add(this.showroombtn);
-            this.Controls.Add(this.addroombtn);
-            this.Controls.Add(this.topic);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Dashboard";
-            this.Text = "Dashboard";
+            this.Text = "Meeting Room Booking System";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label topic;
-        private System.Windows.Forms.Button addroombtn;
-        private System.Windows.Forms.Button showroombtn;
-        private System.Windows.Forms.Button bookroombtn;
-        private System.Windows.Forms.Button btnAddFacility;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem meetingRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addMeetingRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem facilityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addFacilityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bookingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addBookingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkRoomToolStripMenuItem;
     }
 }

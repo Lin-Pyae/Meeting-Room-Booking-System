@@ -40,5 +40,45 @@ namespace Database_Final_Project
             Facility fa = new Facility();
             fa.Show();
         }
+
+        private void addMeetingRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMeetingRoom am = new AddMeetingRoom();
+            am.MdiParent = this;
+            am.Show();
+        }
+
+        private void addFacilityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Facility fa = new Facility();
+            fa.MdiParent = this;
+            fa.Show();
+        }
+
+        private void addBookingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookMeetingRoom br = new BookMeetingRoom();
+            br.MdiParent = this;
+            br.Show();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CheckRoomUser cr = new CheckRoomUser();
+            cr.MdiParent = this;
+            cr.Show();
+        }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserRegister rg = new UserRegister();
+            rg.MdiParent = this;
+            rg.Show();
+        }
     }
 }

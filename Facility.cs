@@ -55,6 +55,7 @@ namespace Database_Final_Project
             cmd.CommandText = "Select * from [facilities]";
             cmd.Connection = con;
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            con.Close();
             DataSet ds = new DataSet();
             da.Fill(ds);
             dgvFacility.DataSource = ds.Tables[0];
@@ -111,12 +112,18 @@ namespace Database_Final_Project
                             MessageBox.Show("Failed to delete row from the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                    con.Close();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dgvFacility_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

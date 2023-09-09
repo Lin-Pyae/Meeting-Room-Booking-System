@@ -22,5 +22,26 @@ namespace Database_Final_Project
             CheckRoomUser cr = new CheckRoomUser();
             cr.Show();
         }
+
+        private void btnbook_Click(object sender, EventArgs e)
+        {
+            BookMeetingRoom bm = new BookMeetingRoom();
+            bm.Show();
+        }
+
+        private void bookRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookMeetingRoom bm = new BookMeetingRoom();
+            bm.MdiParent = this;
+            bm.Show();
+
+        }
+
+        private void checkRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CheckRoomUser cr = new CheckRoomUser();
+            cr.MdiParent = this;
+            cr.Show();
+        }
     }
 }
